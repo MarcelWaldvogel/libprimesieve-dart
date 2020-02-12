@@ -64,6 +64,7 @@ typedef _setIntDart = void Function(int);
 typedef _stringFunc = Pointer<Utf8> Function();
 
 final _dylib = _findDL('primesieve');
+DynamicLibrary get dylib => _dylib;
 final _uint64_primes = _types.UINT64_PRIMES.index;
 
 DynamicLibrary _findDL(String basename) {
