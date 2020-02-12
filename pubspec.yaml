@@ -1,5 +1,5 @@
 name: libprimesieve
-description: A Dart FFI wrapper for the primesieve native library.
+description: Extremely fast and flexible prime sieve operations; a Dart FFI wrapper for the `primesieve` native library.
 version: 0.1.1
 homepage: https://github.com/MarcelWaldvogel/primesieve-dart/
 
