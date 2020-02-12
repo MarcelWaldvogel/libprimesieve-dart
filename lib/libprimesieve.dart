@@ -86,7 +86,7 @@ List<String> _shlibNames(String basename) {
 final _free = _dylib
     .lookup<NativeFunction<_freeFunc>>('primesieve_free')
     .asFunction<_freeDart>();
-List<int> _uint64arrToIntArr(Pointer<Uint64> arr, int count) {
+List<int> _convertAndFreeNativePrimeArray(Pointer<Uint64> arr, int count) {
   // Copy to Dart array
   var primeList = List<int>(count);
   for (var i = 0; i < count; i++) {
@@ -104,7 +104,7 @@ List<int> generatePrimes(int start, int stop) {
   final primes = _generatePrimes(start, stop, sizePointer, _uint64_primes);
   final size = sizePointer.value;
   free(sizePointer);
-  return _uint64arrToIntArr(primes, size);
+  return _convertAndFreeNativePrimeArray(primes, size);
 }
 
 final _generatePrimes = _dylib
@@ -116,7 +116,7 @@ final _generatePrimes = _dylib
 /// Unless changed with [numThreads], all CPU cores are used.
 List<int> generateNPrimes(int n, int start) {
   final primes = _generateNPrimes(n, start, _uint64_primes);
-  return _uint64arrToIntArr(primes, n);
+  return _convertAndFreeNativePrimeArray(primes, n);
 }
 
 final _generateNPrimes = _dylib
