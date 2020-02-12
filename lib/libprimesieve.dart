@@ -71,7 +71,9 @@ DynamicLibrary _findDL(String basename) {
   for (var name in names) {
     try {
       return DynamicLibrary.open(name);
-    } on ArgumentError {}
+    } on ArgumentError {
+      // Try next name now
+    }
   }
   throw ArgumentError(
       "Native $basename library not found; searched for $names");
