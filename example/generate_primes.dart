@@ -1,4 +1,4 @@
-import 'package:primesieve/primesieve.dart';
+import 'package:libprimesieve/libprimesieve.dart';
 
 void main() {
   print("* The primes between 1 and 10 are:");

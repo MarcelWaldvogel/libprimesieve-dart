@@ -1,4 +1,4 @@
-import 'package:primesieve/primesieve.dart';
+import 'package:libprimesieve/libprimesieve.dart';
 import 'package:args/args.dart';
 import 'dart:io';
 
