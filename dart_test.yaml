@@ -1,0 +1,7 @@
+tags:
+  # These tests depend on the system performance and may not be reliable
+  performance:
+  # These tests depend on undocumented behavior and may not be reliable
+  undocumented:
+  # These include all unreliable tests, currently performance and undocumented
+  unreliable:

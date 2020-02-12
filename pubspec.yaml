@@ -1,0 +1,19 @@
+name: primesieve
+description: A Dart FFI wrapper for the primesieve native library.
+version: 0.1.0
+author: Marcel Waldvogel <waldvogel@netfuture.ch>
+homepage: https://github.com/MarcelWaldvogel/primesieve-dart/
+
+executables:
+  print_primes:
+
+environment:
+  sdk: ">=2.6.0 <3.0.0"
+
+dependencies:
+  args: ^1.0.0
+  ffi: ^0.1.3
+
+dev_dependencies:
+  test: ^1.0.0
+  path: ^1.0.0
